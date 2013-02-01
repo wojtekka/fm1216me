@@ -566,14 +566,10 @@ int main(int argc, char **argv)
 	GtkWidget *main_window;
 	GtkBuilder *builder;
 
-//	set_fm(i2c_fd, 99400000);
-//	set_tv(fd, 567250000, PAL_DK);
-//	set_tv(fd, 126125000, PAL_LL, 20);
-
 	gtk_init(&argc, &argv);
 
 	builder = gtk_builder_new();
-	gtk_builder_add_from_file(builder, "gtuner.ui", NULL);
+	gtk_builder_add_from_file(builder, "fm1216me.ui", NULL);
 	main_window = GTK_WIDGET(gtk_builder_get_object(builder, "main_window"));
 	adjustment_div = GTK_ADJUSTMENT(gtk_builder_get_object(builder, "adjustment_div"));
 	entry_freq = GTK_ENTRY(gtk_builder_get_object(builder, "entry_freq"));
